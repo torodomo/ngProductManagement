@@ -26,7 +26,7 @@ export class EditComponent implements OnInit {
     this._route.params
     .subscribe( param => {
       for (let idx = 0; idx < this.products.length; idx++) {
-        if (this.products[idx].id === param.id) {
+        if (this.products[idx].id === Number(param.id)) {
           this.product = this.products[idx];
           break;
         }

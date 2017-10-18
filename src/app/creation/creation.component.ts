@@ -26,12 +26,11 @@ export class CreationComponent implements OnInit {
   }
 
   create() {
-    if (this.newProduct.imgUrl.length < 1 ||
-      this.newProduct.imgUrl === 'null' ||
-      this.newProduct.imgUrl === null) {
-    this.newProduct.imgUrl = null;
-  }
-  console.log('clicked');
+  //   if (this.newProduct.imgUrl.length < 1 ||
+  //     this.newProduct.imgUrl === 'null' ||
+  //     this.newProduct.imgUrl === null) {
+  //   this.newProduct.imgUrl = null;
+  // }
   this.products.push(this.newProduct);
   this._productService.createProduct(this.products);
   this.newProduct = new Product();
